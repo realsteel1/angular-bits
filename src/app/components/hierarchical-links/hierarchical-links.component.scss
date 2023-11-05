@@ -1,0 +1,17 @@
+.jsonText {
+  width: 747px;
+  height: 747px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.flex-item {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
