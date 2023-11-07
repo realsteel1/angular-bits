@@ -24,21 +24,17 @@ export class HierarchicalLinksComponent {
 
   ngOnInit() {
 
-    var url = "https://qa.citivelocity.com/someurl/home";
+    var url = "https://qa.somewebsite.com/someurl/home";
     var params = {
-      redirectUrl: "https://qa.citivelocity.com/my/opus/home"
+      redirectUrl: "https://qa.somewebsite.com/my/opus/home"
     };
     var encodedParams = new URLSearchParams(params).toString();
     var encodedUrl = url + "?" + encodedParams;
     console.log(encodedUrl);
 
-    const encoded = 'https://qa.citivelocity.com/someurl/home?redirectUrl=https%3A%2F%2Fqa.citivelocity.com%2Fmy%2Fopus%2Fhome';
+    const encoded = 'https://qa.somewebsite.com/someurl/home?redirectUrl=https%3A%2F%2Fqa.somewebsite.com%2Fmy%2Fopus%2Fhome';
     const result = decodeURI(encoded);
     console.debug('decoded URI:', result);
-
-
-    //const result = encodeURI('https://qa.citivelocity.com/someurl/home?redirectUrl=https://qa.citivelocity.com/my/opus/home');
-    // console.debug('Result of encofde', result);
 
     const componentMap: Map<string, any> = new Map([
       ['component1', new HierarchicalLinksComponent()],

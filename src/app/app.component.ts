@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Context } from './model/context.model';
-import { PLEXUS_CONTEXT } from './constants/constants';
+import { ContextManager } from 'steel-lib/ContextManager';
+import { Context } from 'steel-lib/models/Context';
 
 @Component({
   selector: 'app-root',
@@ -21,20 +21,10 @@ export class AppComponent {
     },
   };
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   fireEvent() {
-    const instrumentTraded = new CustomEvent<Context>(PLEXUS_CONTEXT, {
-      detail: this.testData
-    });
-
-    // dispatch the events
-    window.dispatchEvent(instrumentTraded);
-  }
-
-  ngOnDestroy() {
-    // window.removeEventListener(this.customEventName, this.handleEvent);
+    const ctxManager = new ContextManager();
+    ctxManager.setContext(this.testData);
   }
 }

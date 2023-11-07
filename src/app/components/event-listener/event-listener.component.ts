@@ -1,7 +1,6 @@
 import { Component } from "@angular/core";
-import { fromEvent } from "rxjs";
-import { PLEXUS_CONTEXT } from "src/app/constants/constants";
-import { Context } from "src/app/model/context.model";
+import { Context } from "steel-lib/models/Context";
+import { PLEXUS_CONTEXT } from "steel-lib/constants/constants";
 
 @Component({
   selector: 'event-listener',

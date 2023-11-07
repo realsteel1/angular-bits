@@ -1,1 +1,0 @@
-export const PLEXUS_CONTEXT = 'PLEXUS_CONTEXT';
