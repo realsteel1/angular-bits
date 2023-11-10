@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ContextManager } from 'steel-lib/ContextManager';
-import { Context } from 'steel-lib/models/Context';
+import { Context } from 'steel-lib/model/context';
 
 @Component({
   selector: 'app-root',
@@ -24,7 +24,6 @@ export class AppComponent {
   ngOnInit() {}
 
   fireEvent() {
-    const ctxManager = new ContextManager();
-    ctxManager.setContext(this.testData);
+    ContextManager.setContext(this.testData);
   }
 }

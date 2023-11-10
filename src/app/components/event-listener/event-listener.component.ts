@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Context } from "steel-lib/models/Context";
+import { Context } from "steel-lib/model/context";
 import { PLEXUS_CONTEXT } from "steel-lib/constants/constants";
 
 @Component({
@@ -10,7 +10,7 @@ export class EventListenerComponent {
 
   ngOnInit() {
 
-    window.addEventListener(PLEXUS_CONTEXT, ((e: CustomEvent<Context>) => {
+    window.document.addEventListener(PLEXUS_CONTEXT, ((e: CustomEvent<Context>) => {
       console.log(e.detail);
     }) as EventListener);
   }
